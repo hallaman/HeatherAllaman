@@ -71,7 +71,7 @@ Rails.application.routes.draw do
     get 'logout_admin', to: 'admins/sessions#destroy'
   end
 
-  
+  mount Thredded::Engine => '/rainbowtribe'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

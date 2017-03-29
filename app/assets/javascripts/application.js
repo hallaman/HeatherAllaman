@@ -19,4 +19,6 @@
 //= require summernote
 //= require turbolinks
 
+//= require thredded
+
 //= require_tree .

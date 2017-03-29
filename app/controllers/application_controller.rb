@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     case resource
     when :member, Member
-      moonvibeguide_issues_path
+      thredded_path
     when :admin, Admin
       issues_path
     else
