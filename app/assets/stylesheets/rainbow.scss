@@ -2,9 +2,9 @@
 
 .thredded--main-container {
   // The padding and max-width are handled by the app's container.
-  max-width: none;
-  padding: 0;
+  max-width: none !important;
+  padding: 0 !important;
   @include thredded-media-tablet-and-up {
-    padding: 0;
+    padding: 0 !important;
   }
 }

@@ -45,7 +45,5 @@ ready = ->
 	  $('#forum-likes_' + data.id).html data.count
 	  return
 
-$(document).ready ready
-$(document).on 'page:fetch', ready
-$(document).on 'page:load', ready
+
 $(document).on 'turbolinks:load', ready

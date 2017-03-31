@@ -80,7 +80,7 @@ Thredded.email_outgoing_prefix = '[My Forum] '
 
 # ==> View Configuration
 # Set the layout for rendering the thredded views.
-Thredded.layout = 'moon_vibe_guide'
+Thredded.layout = 'rainbow'
 
 # ==> URLs
 # How Thredded generates URL slugs from text.
