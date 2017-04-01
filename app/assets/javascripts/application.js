@@ -13,14 +13,13 @@
 //= require jquery
 //= require jquery.turbolinks
 
-//= require thredded
-
-//= require jquery_ujs
 //= require bootstrap-sprockets
 
 //= require summernote
 //= require turbolinks
 
+//= require thredded
+//= require jquery_ujs
 
 
 //= require_tree .

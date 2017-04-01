@@ -21,7 +21,7 @@ class CreateThredded < ActiveRecord::Migration
       end
     end
 
-    unless table_exists?(:friendly_id_slugs)
+    unless table_exists?(:thredded_categories)
       create_table :thredded_categories do |t|
         t.references :messageboard, null: false
         t.string :name, limit: 191, null: false
@@ -32,8 +32,7 @@ class CreateThredded < ActiveRecord::Migration
         t.index [:messageboard_id], name: :index_thredded_categories_on_messageboard_id
       end
       DbTextSearch::CaseInsensitive.add_index connection, :thredded_categories, :name, name: :thredded_categories_name_ci
-    
-
+      
       create_table :thredded_messageboards do |t|
         t.string :name, limit: 191, null: false
         t.string :slug, limit: 191
@@ -234,7 +233,8 @@ class CreateThredded < ActiveRecord::Migration
         t.index [:user_id, :messageboard_id, :notifier_key],
                 name: 'thredded_messageboard_notifications_for_followed_topics_unique', unique: true
       end
-
+    end
+    unless table_exists?(:thredded_user_post_notifications)
       create_table :thredded_user_post_notifications do |t|
         t.references :user, null: false
         t.foreign_key Thredded.user_class.table_name, column: :user_id, on_delete: :cascade

@@ -73,7 +73,7 @@ Thredded.messageboards_order = :position
 Thredded.email_from = 'hellolove@moonvibeguide.com'
 
 # Emails going out will prefix the "Subject:" with the following string
-Thredded.email_outgoing_prefix = '[My Forum] '
+Thredded.email_outgoing_prefix = '[Rainbow Tribe Rise] '
 #
 # The parent mailer for all Thredded mailers
 # Thredded.parent_mailer = 'ActionMailer::Base'
@@ -154,7 +154,7 @@ Thredded.layout = 'rainbow'
 # Change how users can choose to be notified, by adding notifiers here, or removing the initializer altogether
 #
 # default:
-# Thredded.notifiers = [Thredded::EmailNotifier.new]
+Thredded.notifiers = [Thredded::EmailNotifier.new]
 #
 # none:
 # Thredded.notifiers = []
