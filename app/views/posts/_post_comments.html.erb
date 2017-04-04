@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="daily">
+    <div class="col-xs-12 comments-section">
+      <div class="row">
+        <%= comments_tree_for @comments %>
+        <!-- in comments/_comment -->
+      </div>
+        
+      <div class="row">
+        <%= form_for [@post, @post.comments.new] do |f| %>
+          <% if @post.comments.new.errors.any? %>
+            <div class="alert alert-danger">
+              <h4>There are <%= pluralize(@post.errors.count, "error") %>.</h4>
+              <ul>
+                <%= @post.comments.new.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <%= f.label :author, "Name" %><br />
+          <%= f.text_field :author, class: 'form-control' %><br />
+          <%= f.label :link, "Link (optional)" %><br />
+          <%= f.text_field :link, class: 'form-control' %><br />
+          <%= f.label :body %>
+          <%= f.text_area :body, rows: 1, class: 'form-control', placeholder: "Enter comment body" %>
+          <div class="actions">
+            <%= f.submit "Submit Comment", class: 'btn btn-default' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

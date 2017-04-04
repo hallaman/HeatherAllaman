@@ -26,6 +26,9 @@ Rails.application.routes.draw do
   resources :sidebars
   resources :issues
   resources "contacts", only: [:new, :create]
+
+  resources :widgets
+
   
   root :to => 'welcome#index'
 

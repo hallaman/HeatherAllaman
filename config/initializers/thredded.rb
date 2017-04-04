@@ -66,7 +66,7 @@ Thredded.show_topic_followers = false
 # :position            (default) set the position manually (new messageboards go to the bottom, by creation timestamp)
 # :last_post_at_desc   most recent post first
 # :topics_count_desc   most topics first
-Thredded.messageboards_order = :position
+Thredded.messageboards_order = :last_post_at_desc
 
 # ==> Email Configuration
 # Email "From:" field will use the following
@@ -127,12 +127,43 @@ Thredded.layout = 'rainbow'
 #
 #     $ grep view_hooks -R --include '*.html.erb' "$(bundle show thredded)"
 #
-# Rails.application.config.to_prepare do
-#   Thredded.view_hooks.post_form.content_text_area.config.before do |form:, **args|
-#     # This is called in the Thredded view context, so all Thredded helpers and URLs are accessible here directly.
-#     'hi'
-#   end
-# end
+
+# add post likes
+Rails.application.config.to_prepare do
+  Thredded.view_hooks.messageboards_index.container.config.before do |groups:, **args|
+    # This is render in the Thredded view context, so all Thredded helpers and URLs are accessible here directly.
+
+    @messages = []
+ 
+    posts = current_member
+      .thredded_posts
+      .where(messageboard_id: Pundit.policy_scope(current_member, Thredded::Messageboard.all).pluck(:id))
+      .order_newest_first
+      .limit(5)
+    posts.each do |post|
+      topic = Thredded::Topic.find(post.postable_id)
+ 
+      @messages << {
+        title: topic.title,
+        path: Thredded::UrlsHelper::topic_url(topic, only_path: true),
+        author: Member.find(post.user_id),
+        type: 'forum',
+        created_at: post.created_at
+      }
+    end
+
+
+    @messages = @messages.sort_by{|e| e[:created_at]}.reverse.take(5)
+    render 'thredded/show_messages', messages: @messages
+  end
+
+  Thredded.view_hooks.post_form.content_text_area.config.before do |form:, **args|
+  	  #render 'thredded/user_comments', form: form
+  end
+end
+
+  
+
 
 # ==> Topic following
 #
