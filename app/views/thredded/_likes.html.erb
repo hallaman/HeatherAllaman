@@ -1,0 +1,21 @@
+<%= link_to main_app.topic_like_upvote_path(:topic_like_id => @topic.id), class: 'topic-like', method: :put, remote: true, data: { type: :json } do %>
+		<svg height="0" width="0" class="heart">
+  	<defs>
+      <linearGradient id="topic-gradient" x1="0" x2="0" y1="0" y2="1">
+        <stop class="stop1" offset="0%"/>
+        <stop class="stop2" offset="20%"/>
+        <stop class="stop3" offset="40%"/>
+        <stop class="stop4" offset="60%"/>
+        <stop class="stop5" offset="80%"/>
+        <stop class="stop6" offset="100%"/>
+      </linearGradient>
+     
+  	</defs>
+		<path id="heart-icon-<%= @topic.id %>" d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454
+		    C30,20.335,16,28.261,16,28.261z" fill="url(#topic-gradient)"/>    
+
+	</svg>
+<% end %>
+<span id="topic-likes-<%= @topic.id %>" class="badge"><%= topic_likes(@topic.id) %></span>
+
+

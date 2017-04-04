@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :topic_likes do
+    put "upvote", to: "topic_likes#upvote"
+  end
   resources :faqs
   resources :pages
   resources :testimonials
@@ -27,7 +30,6 @@ Rails.application.routes.draw do
   resources :issues
   resources "contacts", only: [:new, :create]
 
-  resources :widgets
 
   
   root :to => 'welcome#index'

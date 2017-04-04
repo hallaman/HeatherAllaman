@@ -62,7 +62,7 @@ gem 'bootstrap_form'
 gem 'closure_tree'
 
 # like button for comments
-gem 'acts_as_votable', '~> 0.10.0'
+#gem 'acts_as_votable', '~> 0.10.0'
 
 gem 'instagram'
 

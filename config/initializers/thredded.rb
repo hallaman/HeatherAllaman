@@ -4,6 +4,12 @@
 Rails.application.config.to_prepare do
   Thredded::ApplicationController.module_eval do
     before_action :authenticate_member!
+
+    def topic_likes(id)
+    	@topic_likes = TopicLike.find_or_create_by(hash_id: id)
+    	@topic_likes.count
+    end
+    helper_method :topic_likes
   end
 end
 
@@ -157,8 +163,8 @@ Rails.application.config.to_prepare do
     render 'thredded/show_messages', messages: @messages
   end
 
-  Thredded.view_hooks.post_form.content_text_area.config.before do |form:, **args|
-  	  #render 'thredded/user_comments', form: form
+  Thredded.view_hooks.post_common.actions.config.before do |post:, **args|
+  	  #render 'thredded/likes', post: post
   end
 end
 
