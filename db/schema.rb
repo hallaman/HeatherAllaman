@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170404195139) do
+ActiveRecord::Schema.define(version: 20170404210152) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -224,6 +224,13 @@ ActiveRecord::Schema.define(version: 20170404195139) do
     t.integer  "main_image_file_size"
     t.datetime "main_image_updated_at"
     t.string   "date"
+  end
+
+  create_table "post_likes", force: :cascade do |t|
+    t.string   "postable_id"
+    t.integer  "count"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "posts", force: :cascade do |t|

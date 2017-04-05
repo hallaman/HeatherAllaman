@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :post_likes do
+    put "upvote", to: "post_likes#upvote"
+  end
   resources :topic_likes do
     put "upvote", to: "topic_likes#upvote"
   end

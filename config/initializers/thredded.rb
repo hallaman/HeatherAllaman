@@ -10,6 +10,12 @@ Rails.application.config.to_prepare do
     	@topic_likes.count
     end
     helper_method :topic_likes
+
+    def post_likes(id)
+    	@post_likes = PostLike.find_or_create_by(postable_id: id)
+    	@post_likes.count
+    end
+    helper_method :post_likes
   end
 end
 

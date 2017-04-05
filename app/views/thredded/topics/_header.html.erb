@@ -10,7 +10,7 @@
                 class: 'thredded--topic-header--edit-topic' %>
   <% end %>
 
-  <%= render 'thredded/likes', locals: {topic: topic} %>
+  <%= render 'thredded/topic_likes', locals: {topic: topic} %>
 
   <% if thredded_current_user %>
     <% if topic.followed? %>
