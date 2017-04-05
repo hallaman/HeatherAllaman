@@ -42,56 +42,6 @@ blockquote {
 	}
 }
 
-.like {
-	text-decoration: none !important;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-
-}
-
-a.post-like {
-	overflow: hidden;
-	display: inline-block;
-	cursor: pointer;
-}
-
-.heart {
-	width: 32px;
-	height: 32px;
-	font-family: monospace;
-	transition: all 2s ease-in-out;
-	.stop1 { stop-color: $gold;}
-  .stop2 { stop-color: $gold; }
-  .stop3 { stop-color: $gold; }
-  .stop4 { stop-color: $gold;}
-  .stop5 { stop-color: $gold; }
-  .stop6 { stop-color: $gold; }
-	&.rainbow {
-		.stop1 { stop-color: red; stop-opacity: .7;}
-    .stop2 { stop-color: orange; stop-opacity: .7; }
-    .stop3 { stop-color: yellow; stop-opacity: .7; }
-    .stop4 { stop-color: green; stop-opacity: .7;}
-    .stop5 { stop-color: blue; stop-opacity: .7; }
-    .stop6 { stop-color: purple; stop-opacity: .7; }
-	}
-	&.purple {
-		.stop1 { stop-color: $purple; stop-opacity: .7;}
-    .stop2 { stop-color: $purple; stop-opacity: .7; }
-    .stop3 { stop-color: $purple; stop-opacity: .7; }
-    .stop4 { stop-color: $purple; stop-opacity: .7;}
-    .stop5 { stop-color: $purple; stop-opacity: .7; }
-    .stop6 { stop-color: $purple; stop-opacity: .7; }
-	}
-	&.random {
-		.stop1 { stop-color: $gold;}
-    .stop2 { stop-color: $mauve;  }
-    .stop3 { stop-color: $purple;  }
-    .stop4 { stop-color: $purple; }
-    .stop5 { stop-color: $mauve;  }
-    .stop6 { stop-color: $gold;  }
-	}
-}
 
 .post-listing {
 	max-width: 800px;
