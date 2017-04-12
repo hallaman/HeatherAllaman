@@ -16,13 +16,21 @@
       <footer class="thredded--pagination-top"><%= paginate @posts %></footer>
     <% end %>
 
-    <div id="teacher_posts">
-      <%= render_posts @posts, partial: 'thredded/posts/post', content_partial: 'thredded/posts/content' %>
-    </div>
+    <% if @posts.topic.messageboard_id == 1 #separate teacher/user comments for Round Table %>
 
-    <div id="user_posts">
+      <div id="teacher_posts">
+        <%= render_posts @posts, partial: 'thredded/posts/post', content_partial: 'thredded/posts/content' %>
+      </div>
+
+      <div id="user_posts">
+        <%= render_posts @posts, partial: 'thredded/posts/post', content_partial: 'thredded/posts/content' %>
+      </div>
+
+    <% else %>
+
       <%= render_posts @posts, partial: 'thredded/posts/post', content_partial: 'thredded/posts/content' %>
-    </div>
+
+    <% end %>
 
     <%= view_hooks.posts_common.pagination_bottom.render(self, posts: @posts) do %>
       <footer class="thredded--pagination-bottom"><%= paginate @posts %></footer>
