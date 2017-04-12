@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170404210152) do
+ActiveRecord::Schema.define(version: 20170405153022) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -500,6 +500,15 @@ ActiveRecord::Schema.define(version: 20170404210152) do
   end
 
   add_index "thredded_user_messageboard_preferences", ["user_id", "messageboard_id"], name: "thredded_user_messageboard_preferences_user_id_messageboard_id", unique: true
+
+  create_table "thredded_user_post_notifications", force: :cascade do |t|
+    t.integer  "user_id",     null: false
+    t.integer  "post_id",     null: false
+    t.datetime "notified_at", null: false
+  end
+
+  add_index "thredded_user_post_notifications", ["post_id"], name: "index_thredded_user_post_notifications_on_post_id"
+  add_index "thredded_user_post_notifications", ["user_id", "post_id"], name: "index_thredded_user_post_notifications_on_user_id_and_post_id", unique: true
 
   create_table "thredded_user_preferences", force: :cascade do |t|
     t.integer  "user_id",                                  null: false

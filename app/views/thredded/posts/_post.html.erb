@@ -1,5 +1,8 @@
 <% post, content = post_and_content if local_assigns.key?(:post_and_content) %>
-<%= content_tag :article, id: dom_id(post), class: "thredded--post thredded--#{post.read_state}--post" do %>
+
+<% @user_css_class = post.user.superuser? ? 'teacher-post' : 'user-post' %>
+
+<%= content_tag :article, id: dom_id(post), class: "thredded--post thredded--#{post.read_state}--post #{@user_css_class}" do %>
   <%= render 'thredded/posts_common/actions', post: post %>
   <%= render 'thredded/posts_common/header', post: post %>
   <%= content || render('thredded/posts/content', post: post) %>

@@ -15,7 +15,15 @@
     <%= view_hooks.posts_common.pagination_top.render(self, posts: @posts) do %>
       <footer class="thredded--pagination-top"><%= paginate @posts %></footer>
     <% end %>
-    <%= render_posts @posts, partial: 'thredded/posts/post', content_partial: 'thredded/posts/content' %>
+
+    <div id="teacher_posts">
+      <%= render_posts @posts, partial: 'thredded/posts/post', content_partial: 'thredded/posts/content' %>
+    </div>
+
+    <div id="user_posts">
+      <%= render_posts @posts, partial: 'thredded/posts/post', content_partial: 'thredded/posts/content' %>
+    </div>
+
     <%= view_hooks.posts_common.pagination_bottom.render(self, posts: @posts) do %>
       <footer class="thredded--pagination-bottom"><%= paginate @posts %></footer>
     <% end %>

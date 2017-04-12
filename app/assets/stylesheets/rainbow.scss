@@ -8,3 +8,15 @@
     padding: 0 !important;
   }
 }
+
+#user_posts .teacher-post {
+	display: none;
+}
+
+#teacher_posts .user-post {
+	display: none;
+}
+
+.teacher-post {
+	background-color: yellow;
+}

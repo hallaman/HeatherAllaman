@@ -145,28 +145,28 @@ Rails.application.config.to_prepare do
   Thredded.view_hooks.messageboards_index.container.config.before do |groups:, **args|
     # This is render in the Thredded view context, so all Thredded helpers and URLs are accessible here directly.
 
-    @messages = []
+    # @messages = []
  
-    posts = current_member
-      .thredded_posts
-      .where(messageboard_id: Pundit.policy_scope(current_member, Thredded::Messageboard.all).pluck(:id))
-      .order_newest_first
-      .limit(5)
-    posts.each do |post|
-      topic = Thredded::Topic.find(post.postable_id)
+    # posts = current_member
+    #   .thredded_posts
+    #   .where(messageboard_id: Pundit.policy_scope(current_member, Thredded::Messageboard.all).pluck(:id))
+    #   .order_newest_first
+    #   .limit(5)
+    # posts.each do |post|
+    #   topic = Thredded::Topic.find(post.postable_id)
  
-      @messages << {
-        title: topic.title,
-        path: Thredded::UrlsHelper::topic_url(topic, only_path: true),
-        author: Member.find(post.user_id),
-        type: 'forum',
-        created_at: post.created_at
-      }
-    end
+    #   @messages << {
+    #     title: topic.title,
+    #     path: Thredded::UrlsHelper::topic_url(topic, only_path: true),
+    #     author: Member.find(post.user_id),
+    #     type: 'forum',
+    #     created_at: post.created_at
+    #   }
+    # end
 
 
-    @messages = @messages.sort_by{|e| e[:created_at]}.reverse.take(5)
-    render 'thredded/show_messages', messages: @messages
+    # @messages = @messages.sort_by{|e| e[:created_at]}.reverse.take(5)
+    # render 'thredded/show_messages', messages: @messages
   end
 
   Thredded.view_hooks.post_common.actions.config.before do |post:, **args|
