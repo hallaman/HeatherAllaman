@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  root :to => 'welcome#index'
+
+
   resources :post_likes do
     put "upvote", to: "post_likes#upvote"
   end
@@ -33,9 +36,6 @@ Rails.application.routes.draw do
   resources :issues
   resources "contacts", only: [:new, :create]
 
-
-  
-  root :to => 'welcome#index'
 
   get 'welcome/index'
 
