@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   root :to => 'welcome#index'
 
-
   resources :post_likes do
     put "upvote", to: "post_likes#upvote"
   end
@@ -36,8 +35,7 @@ Rails.application.routes.draw do
   resources :issues
   resources "contacts", only: [:new, :create]
 
-
-  get 'welcome/index'
+  get 'welcome/index', as: :welcome
 
   match "/moonvibeguide", to: "moon_vibe_guide#index", :via => 'get'
   match "/moonvibeguide/issues", to: "moon_vibe_guide#issues", :via => 'get'
@@ -54,7 +52,6 @@ Rails.application.routes.draw do
   match "/faq", to: "faqs#listing", :via => 'get', as: :list_faq
 
   match '/contact',     to: 'contacts#new',             via: 'get'
-  
 
   devise_for :member, :path => '', :path_names => {  sign_in: 'login', sign_out: 'logout', sign_up: 'join', password: 'member_password', registration: 'member_registration' }, 
   controllers: { sessions: 'members/sessions', registrations: "members/registrations" }
