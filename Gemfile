@@ -70,6 +70,9 @@ gem 'social_shares'
 
 gem 'thredded', '~> 0.11.0'
 
+# helps Thredded display user profile information
+gem 'backport_new_renderer'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

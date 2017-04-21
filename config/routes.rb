@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root :to => 'welcome#index'
+  root 'welcome#index'
 
   resources :post_likes do
     put "upvote", to: "post_likes#upvote"
@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :topic_likes do
     put "upvote", to: "topic_likes#upvote"
   end
+  resources :users
   resources :faqs
   resources :pages
   resources :testimonials
