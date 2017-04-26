@@ -20,7 +20,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rainbow Tribe </a>
           <ul class="dropdown-menu">
             <li><%= link_to "Rainbow Tribe Rise", main_app.thredded_path %><li>
-            <li><%= link_to "MOON VIBE Guide", main_app.moonvibeguide_issues_path %><li>
+            <!-- <li><%#= link_to "MOON VIBE Guide", main_app.moonvibeguide_issues_path %><li> -->
             <li><%= link_to "Daily Reading", main_app.post_path(daily) if !daily.nil? %><li>
             <li><%= link_to "About The Tribe", main_app.moonvibeguide_path %><li>
             <li><%= link_to "Logout", main_app.destroy_member_session_path if member_signed_in? %></li>

@@ -25,5 +25,18 @@
 	      posts: Thredded.posts_page_view(
 	      	scope: user.thredded_posts.order_newest_first.limit(5), 
 	      	current_user: current_member) } %>
+	   <hr />
+	   <h2>Teachers</h2>
+	   <%= @teachers %>
+	   <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
+	      posts: Thredded.posts_page_view(
+	      	scope: Thredded::Post.where("user_id IN (?)", @teachers).order_newest_first, 
+	      	current_user: current_member) } %>
+	   <hr />
+	   <h2>All</h2>
+	   <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
+	      posts: Thredded.posts_page_view(
+	      	scope: Thredded::Post.order_newest_first, 
+	      	current_user: current_member) } %>
 	</div>
 </div>
