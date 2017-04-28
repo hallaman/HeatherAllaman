@@ -1,0 +1,16 @@
+<% 
+	teachers = Member.where('superuser = ?', true).pluck(:id) 
+	latest_teacher_posts = Thredded::Post.where("user_id IN (?)", @teachers).order_newest_first.limit(5)
+%>
+ <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
+    posts: Thredded.posts_page_view(
+    	scope: Thredded::Post.where("user_id IN (?)", @teachers).order_newest_first.limit(5), 
+    	current_user: current_member) } %>
+ <hr />
+<%
+ latest_teacher_posts.each do |post| %>
+	<p>
+		<%= link_to post.title, Thredded::UrlsHelper::topic_url(topic, only_path: true) %>
+	</p>
+<% end 
+%>

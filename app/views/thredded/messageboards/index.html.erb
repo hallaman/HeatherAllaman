@@ -17,6 +17,16 @@
         <% end %>
       <% end %>
 
+      <div>
+        <h2>Latest Topics</h2>
+        <%= render 'thredded/messageboards/latest_topics' %>
+      </div>
+
+      <div>
+        <h2>Latest Teacher Comments</h2>
+        <%= render 'thredded/messageboards/latest_teacher_comments' %>
+      </div>
+
       <div class="thredded--messageboards--actions">
         <% if policy(Thredded::Messageboard.new).create? %>
           <a class="thredded--button" href="<%= new_messageboard_path %>">

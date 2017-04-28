@@ -7,6 +7,9 @@
 	  <h1>
 	    <%= image_tag Thredded.avatar_url.call(user), class: 'thredded--user--avatar' %><%= user.username.present? ? user.username : user.email %>
 	  </h1>
+	  <% if @user.superuser %>
+	      <h3>MASTER TEACHER</h3>
+	    <% end %>
 	  <ul>
 	    <li><%= t 'thredded.users.user_since_html', time_ago: time_ago_in_words(user.created_at) %></li>
 	    <% if user_detail.last_seen_at %>
@@ -26,13 +29,7 @@
 	      	scope: user.thredded_posts.order_newest_first.limit(5), 
 	      	current_user: current_member) } %>
 	   <hr />
-	   <h2>Teachers</h2>
-	   <%= @teachers %>
-	   <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
-	      posts: Thredded.posts_page_view(
-	      	scope: Thredded::Post.where("user_id IN (?)", @teachers).order_newest_first, 
-	      	current_user: current_member) } %>
-	   <hr />
+	   
 	   <h2>All</h2>
 	   <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
 	      posts: Thredded.posts_page_view(

@@ -1,0 +1,8 @@
+<% 
+latest_topics = Thredded::Topic.order('updated_at DESC').limit(5)
+latest_topics.each do |topic| %>
+	<p>
+		<%= link_to topic.title, Thredded::UrlsHelper::topic_url(topic, only_path: true) %>
+	</p>
+<% end 
+%>
