@@ -2,7 +2,7 @@ class PostLikesController < ApplicationController
   before_action :set_post_like, only: [:show, :edit, :update, :destroy]
 
   def upvote 
-    @post_like = PostLike.find_or_create_by(postable_id: params[:post_like_id])
+    @post_like = PostLike.find_or_create_by(postable_id: params[:thredded_post_like_id])
     @post_like.count = @post_like.count.present? ? @post_like.count + 1 : 1
     @post_like.save
     respond_to do |format|

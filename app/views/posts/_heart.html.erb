@@ -1,0 +1,16 @@
+<svg height="0" width="0" class="heart <%= heart_class %>">
+  <defs>
+    <linearGradient id="Gradient-<%= thing_id %>" x1="0" x2="0" y1="0" y2="1">
+      <stop class="stop1" offset="0%"/>
+      <stop class="stop2" offset="20%"/>
+      <stop class="stop3" offset="40%"/>
+      <stop class="stop4" offset="60%"/>
+      <stop class="stop5" offset="80%"/>
+      <stop class="stop6" offset="100%"/>
+    </linearGradient>
+   
+  </defs>
+  <path id="heart-icon-<%= thing_id %>" d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454
+      C30,20.335,16,28.261,16,28.261z" fill="url(#Gradient-<%= thing_id %>)"/>    
+
+</svg>

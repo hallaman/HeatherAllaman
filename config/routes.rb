@@ -2,10 +2,10 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  resources :post_likes do
+  resources :thredded_post_likes do
     put "upvote", to: "post_likes#upvote"
   end
-  resources :topic_likes do
+  resources :thredded_topic_likes do
     put "upvote", to: "topic_likes#upvote"
   end
   resources :users

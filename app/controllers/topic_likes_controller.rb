@@ -2,7 +2,7 @@ class TopicLikesController < ApplicationController
   before_action :set_topic_like, only: [:show, :edit, :update, :destroy]
 
   def upvote 
-    @topic_like = TopicLike.find_or_create_by(hash_id: params[:topic_like_id])
+    @topic_like = TopicLike.find_or_create_by(hash_id: params[:thredded_topic_like_id])
     @topic_like.count = @topic_like.count.present? ? @topic_like.count + 1 : 1
     @topic_like.save
     respond_to do |format|
