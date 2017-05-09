@@ -19,16 +19,16 @@
     <% if @posts.topic.messageboard_id == 1 #separate teacher/user comments for Round Table %>
 
       <div id="teacher_posts">
-        <%= render_posts @posts, partial: 'thredded/posts/post', content_partial: 'thredded/posts/content' %>
+        <%= render @posts, partial: 'thredded/posts/post', content_partial: 'thredded/posts/content', post_type: 'teacher' %>
       </div>
 
       <div id="user_posts">
-        <%= render_posts @posts, partial: 'thredded/posts/post', content_partial: 'thredded/posts/content' %>
+        <%= render @posts, partial: 'thredded/posts/post', content_partial: 'thredded/posts/content', post_type: 'user' %>
       </div>
 
     <% else %>
 
-      <%= render_posts @posts, partial: 'thredded/posts/post', content_partial: 'thredded/posts/content' %>
+      <%= render @posts, partial: 'thredded/posts/post', content_partial: 'thredded/posts/content', post_type: 'all' %>
 
     <% end %>
 

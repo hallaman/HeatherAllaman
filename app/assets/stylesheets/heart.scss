@@ -21,18 +21,24 @@ svg.heart {
 	font-family: monospace;
   transition: opacity .4s ease;
 
-  .opaque {
-    opacity: 1;
+  &.gold {
+    .stop1 { stop-color: $gold;}
+    .stop2 { stop-color: $gold; }
+    .stop3 { stop-color: $gold; }
+    .stop4 { stop-color: $gold;}
+    .stop5 { stop-color: $gold; }
+    .stop6 { stop-color: $gold; }
   }
-
-	.stop1 { stop-color: $gold;}
-  .stop2 { stop-color: $gold; }
-  .stop3 { stop-color: $gold; }
-  .stop4 { stop-color: $gold;}
-  .stop5 { stop-color: $gold; }
-  .stop6 { stop-color: $gold; }
+  &.purple {
+    .stop1 { stop-color: $purple; stop-opacity: .7;}
+    .stop2 { stop-color: $purple; stop-opacity: .7; }
+    .stop3 { stop-color: $purple; stop-opacity: .7; }
+    .stop4 { stop-color: $purple; stop-opacity: .7;}
+    .stop5 { stop-color: $purple; stop-opacity: .7; }
+    .stop6 { stop-color: $purple; stop-opacity: .7; }
+  }
 	&.rainbow {
-    opacity: 1;
+    transition: all 2s ease;
 		.stop1 { stop-color: red; stop-opacity: .7; }
     .stop2 { stop-color: orange; stop-opacity: .7; }
     .stop3 { stop-color: yellow; stop-opacity: .7; }
@@ -40,17 +46,9 @@ svg.heart {
     .stop5 { stop-color: blue; stop-opacity: .7; }
     .stop6 { stop-color: purple; stop-opacity: .7; }
 	}
-	&.purple {
-    opacity: 1;
-		.stop1 { stop-color: $purple; stop-opacity: .7;}
-    .stop2 { stop-color: $purple; stop-opacity: .7; }
-    .stop3 { stop-color: $purple; stop-opacity: .7; }
-    .stop4 { stop-color: $purple; stop-opacity: .7;}
-    .stop5 { stop-color: $purple; stop-opacity: .7; }
-    .stop6 { stop-color: $purple; stop-opacity: .7; }
-	}
+	
 	&.random {
-    opacity: 1;
+    transition: all 2s ease;
 		.stop1 { stop-color: $gold;}
     .stop2 { stop-color: $mauve;  }
     .stop3 { stop-color: $purple;  }
