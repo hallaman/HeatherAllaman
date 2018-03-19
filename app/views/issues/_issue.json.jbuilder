@@ -1,2 +1,0 @@
-json.extract! issue, :id, :issue_number, :week, :main_image, :moon_phase, :welcome, :sidebar_id, :monday_id, :tuesday_id, :wednesday_id, :thursday_id, :friday_id, :saturday_id, :sunday_id, :created_at, :updated_at
-json.url issue_url(issue, format: :json)

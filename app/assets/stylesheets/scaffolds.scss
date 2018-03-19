@@ -13,7 +13,7 @@ body#mvg {
 body {
   background-color: $white;
   color: $blackish;
-  font-size: 1em;
+  font-size: 1.2em;
   letter-spacing: .1em;
   line-height: 1.2em;
   width: 100%;
@@ -37,7 +37,7 @@ h1, h2, h3 {
 }
 
 h4 {
-  font-family: "MANIFESTO";
+  font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   margin: 0;
   line-height: 1.5em;
@@ -56,6 +56,10 @@ a {
     color: $gold;
     text-decoration: underline;
   }
+}
+
+a.logo {
+  display: inline-block;
 }
 
 ul {
@@ -80,7 +84,6 @@ hr.gold-line {
   padding: 6px 12px;
   font-size: 1em;
   // border: 1px solid $gold;
-  font-family: "MANIFESTO";
   color: $gold;
   line-height: 1;
   vertical-align: middle;
@@ -139,13 +142,13 @@ div {
   font-size: 3em;
 }
 
-.an-btn {
-  background-color: $white;
+.ha-btn {
+  background-color: transparent;
   color: $blackish;
   border-radius: 0;
-  padding: 8px 0px 5px;
+  padding: 12px 0px 9px;
   margin-top: 5px;
-  font-family: 'MANIFESTO';
+  font-family: 'Work Sans', sans-serif;
   font-size: 1.4em;
   border: 2px solid $blackish;
   width: 185px;

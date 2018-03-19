@@ -1,1 +1,0 @@
-json.array! @saturdays, partial: 'saturdays/saturday', as: :saturday

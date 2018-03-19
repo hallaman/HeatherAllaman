@@ -1,41 +1,20 @@
 <nav class="navbar navbar-default">
   <div class="container">
 
-    <div class="navbar-header">
-       <% if controller.controller_name == 'moon_vibe_guide' || 
-             controller.controller_name == 'issues' && controller.action_name == 'show'
-        %>
-        <%= link_to "MOON VIBE GUIDE", moonvibeguide_issues_path, :class => 'navbar-brand mvg-logo' %>
-      <% end %>
-    </div>
 
     <div class="navbar-collapse" id="navbar-collapse">
       <ul class="nav navbar-nav navbar-left">
-        <li><%= link_to image_tag("AN_Logo.png"), main_app.root_path, :class => 'logo text-center' %></li>
+        <!-- <li><%# link_to image_tag("AN_Logo.png"), main_app.root_path, :class => 'logo text-center' %></li> -->
+        <li><h2><%= link_to "Heather Allaman", main_app.root_path, :class => 'logo text-center' %></h2></li> 
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rainbow Tribe </a>
-          <ul class="dropdown-menu">
-            <li><%= link_to "Rainbow Tribe Rise", main_app.thredded_path %><li>
-            <!-- <li><%#= link_to "MOON VIBE Guide", main_app.moonvibeguide_issues_path %><li> -->
-            <li><%= link_to "Daily Reading", main_app.post_path(daily) if !daily.nil? %><li>
-            <li><%= link_to "About The Tribe", main_app.moonvibeguide_path %><li>
-            <li><%= link_to "Logout", main_app.destroy_member_session_path if member_signed_in? %></li>
 
-          </ul>
-        </li>
+        <li><%= link_to 'CONTACT', main_app.contact_path %></li>
+        <li><%# link_to 'FAQ', main_app.list_faq_path %></li>
+        <li><%# link_to "BLOG", main_app.blog_path %><li>
 
-        <% if controller.controller_name != 'moon_vibe_guide' %>
-
-          <li><%= link_to "About", main_app.page_path(about) if about.present? %></li>
-          <li><a href="http://www.themoonplanner.com" target="_blank">Moon Planner</a></li>
-          <li><a href="https://www.etsy.com/shop/aquariusNATION?ref=si_shop">Shop</a></li>
-          <li><%= link_to "Blog", main_app.blog_path %><li>
-
-        <% end %>
       
         <% if member_signed_in? && @issue.present? && @issue.sidebars.present? %>
           <li class="dropdown visible-xs">
@@ -57,9 +36,6 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><%= link_to "MVG Issues", main_app.issues_path %><li>
-              <li><%= link_to "Readings", main_app.podcasts_path %><li>
-              <li><%= link_to "Numerology", main_app.numbers_path %><li>
               <li><%= link_to "Media", main_app.media_path %><li>
               <li role="separator" class="divider"></li>
               <li><%= link_to "Blog & Daily", main_app.posts_path %><li>

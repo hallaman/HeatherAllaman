@@ -1,1 +1,0 @@
-json.array! @latest_items, partial: 'latest_items/latest_item', as: :latest_item

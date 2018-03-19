@@ -12,7 +12,7 @@
 }
 
 #home_header {
-	background-image: image-url('home_header.png');
+	background-image: image-url('louise.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -108,14 +108,15 @@
 }
 
 .purple-bg {
-	background-image: image-url('purple_bg.png');
+	background-image: image-url('mtn_bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   padding: 0;
   overflow: hidden;
   width: 100%;
-  color: $white; 
+  color: $blackish; 
+  font-weight: bold;
 }
 
 .moonvibetribe {
@@ -301,7 +302,6 @@
   }
 
   h3 {
-    font-family: 'Dancing Script', cursive;
     font-size: 3em;
   }
 }

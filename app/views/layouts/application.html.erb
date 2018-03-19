@@ -2,27 +2,25 @@
 <html lang="en">
 <head>
   
-  <title>Aquarius Nation</title>
+  <title>Heather Allaman</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'application', media: 'print', 'data-turbolinks-track' => true %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-  <!-- necessary for transactions through Send Owl-->
-  <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js" ></script>
 
   <!-- You can use Open Graph tags to customize link previews.
     Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
   <meta property="og:url"           content="<%=  URI.parse(request.base_url + request.original_fullpath) %>" />
   
-  <meta property="og:type"          content="Aquarius Nation" />
-  <meta property="og:title"         content="Aquarius Nation" />
-  <meta property="og:description"   content="Aquarius Nation. Forward Empowerment. High Vibe Style. Guidance and wisdom for the bringers of the New Earth ways." />
-  <meta property="og:image"         content="assets/images/AN_Logo.png" />
+  <meta property="og:type"          content="Heather Allaman" />
+  <meta property="og:title"         content="Heather Allaman" />
+  <meta property="og:description"   content="Heather Allaman. Yoga. Massage. Healing." />
+  <meta property="og:image"         content="assets/images/louise.png" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Aquarius Nation. Forward Empowerment. High Vibe Style. Guidance and wisdom for the bringers of the New Earth ways." />
+  <meta name="description" content="Heather Allaman. Yoga. Massage. Healing." />
 
   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
@@ -37,7 +35,7 @@
 
 </head>
 <body>
-  <%= render 'layouts/topbar', locals: { newsbar: @newsbar } %>
+  <%# render 'layouts/topbar', locals: { newsbar: @newsbar } %>
 
   <%= render 'layouts/header' %>
   <div class="container-fluid"> 

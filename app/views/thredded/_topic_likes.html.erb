@@ -1,9 +1,0 @@
-<%= link_to main_app.thredded_topic_like_upvote_path(:thredded_topic_like_id => @topic.id), class: 'topic-like', method: :put, remote: true, data: { type: :json } do 
-  
-    render  partial: 'posts/heart', locals: { thing_id: 'topic'+@topic.id.to_s, heart_class: 'gold'}
-
-end 
-%>
-<span id="topic-likes-<%= @topic.id %>" class="badge"><%= topic_likes(@topic.id) %></span>
-
-

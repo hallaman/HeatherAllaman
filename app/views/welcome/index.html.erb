@@ -1,239 +1,59 @@
 <div class="welcome">
 	<div id="home_header" class="col-xs-12">
-		<%= image_tag('home_header.png', style: 'visibility: hidden; width: 100%; height: auto;') %>
+		<%= image_tag('louise.png', style: 'visibility: hidden; width: 100%; height: auto;') %>
 	</div>
 	<div class="col-xs-12">
 		<div class="container">
 			<div class="row manifesto">
-				<h4 class="text-center">A PLACE FOR THE RAINBOW TRIBE</h4>
-				<h4 class="text-center">WHO ARE WAKING UP</h4>
-				<h4 class="text-center">AND ALIGNING</h4>
-				<h4 class="text-center">TO THE AGE OF AQUARIUS</h4>
-				<h4 class="text-center">TO BRING LOVE AND HEALING TO THE PLANET</h4>
-
-				<p class="text-center"><%= image_tag('top_symbol.png', width: 100) %></p>
+				<h4 class="text-center">Do you know that peace is within reach? </h4>
+				<h4 class="text-center">Do you desire more ease and enjoyment in your life; to live in the now? </h4>
+				<h4 class="text-center">Are you open and ready to unlock the wisdom of your body?</h4>
 
 			</div>
 		</div>
 	</div>
-	<div class="purple-bg moonplanner">
-		<div class="col-xs-12">
-			<div class="container">
-				<div class="row">
-					<div class="moonplanner">
-						<div class="hidden-xs col-sm-5">
-							<div class="thumbnail">
-								<a href="http://www.themoonplanner.com" target="_blank"><%= image_tag('moonplanner.png') %></a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-5 col-sm-offset-1">
-							<h4>MOON PLANNER <br /> 2017</h4>
-							<p>Aquarius Nation &amp; Star Mandalas<br />
-							 Bringing you a 2017<br />
-							 energetic forecast</p>
-							<%= link_to "READ MORE", "http://www.themoonplanner.com", class: "btn btn-default an-btn", target: '_blank' %>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-xs-12">
-		<div class="container">
-			<div class="row text-center daily">
-				<%= image_tag('daily_readings_symbol.png', width: 100, style: 'padding-bottom: 30px;') %>
-
-	    	<h2>DAILY MOON VIBE READING</h2>
-	    	<h4><span class="emph-day"><%= Date.today.strftime('%A') %></span><%= Date.today.strftime('%-d %B %Y') %></h4>
-
-				<% 
-		  		if @daily_reading_text.present? 
-		  		  @daily_reading_text = strip_tags(@daily_reading.body).truncate_words(193).split(/[^'\w^.\w^,\w^!\w^?\w]+/).in_groups(2)
-
-			      @daily_para_1 = @daily_reading_text[0].join(' ').to_s 
-			      @daily_para_2 = @daily_reading_text[1].join(' ').to_s
-			    end
-			  %>
-
-				<div class="entry col-xs-12 col-md-6 text-left">
-					<p><%= @daily_para_1.to_s  if @daily_para_1.present? %></p>
-				</div>
-
-				<div class="entry col-xs-12 col-md-6 text-left">
-					<p><%= @daily_para_2.to_s  if @daily_para_2.present? %></p>
-				</div>
-
-				
-			</div>
-		</div>
-	</div>
-	<div class="text-center">
-		<div class="readmore">
-			<%= link_to 'READ MORE', post_path(daily), class: 'btn btn-default an-btn ' if !daily.nil? %>
-		</div>
-	</div>
-
+	
 	<div class="purple-bg moonvibetribe">
 		<div class="col-xs-12">
 			<div class="container">
 				<div class="row">
-					<h3 class="text-center">MOON VIBE TRIBE</h3>
 					<div class="entry col-xs-12 col-md-6 text-left">
-						<p>Big days of transformation are before us! Like REALLY BIG!! I am feeling a VERY inspired energy rolling through today where we fully separate from old paths that defined our way of being and how we chose to move through life. We are DONE and this is NOT just talk.</p>
+						<p>I guide people into connection and communication with their bodies, creating a comforting space for growth and healing to occur from within any body. I combine my skills in meditation, yoga, massage and energy work,</p>
 					</div>
 
 					<div class="entry col-xs-12 col-md-6 text-left">
-						<p>Big days of transformation are before us! Like REALLY BIG!! I am feeling a VERY inspired energy rolling through today where we fully separate from old paths that defined our way of being and how we chose to move through life. We are DONE and this is NOT just talk.</p>
+						<p>Tailoring sessions to meet you exactly where you are and encompass methods specific to you and your unique intentions. Let's set up a free consultation appointment, if you're ready to try me out.</p>
+						<hr />
 					</div>
-					<div class="entry col-xs-12 col-md-6 text-center button">
-						<%= link_to "LOG IN", login_path, class: "btn btn-default an-btn" %>
-					</div>
-					<div class="entry col-xs-12 col-md-6 text-center button">
-						<%= link_to "READ MORE", moonvibeguide_path, class: "btn btn-default an-btn" %>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+					
 
-	<div class="col-xs-12">
-		<div class="container about">
-			<div class="row">
-				
-				<div class="col-xs-12 col-sm-6">
-					<h4 class="text_center">ABOUT KV</h4>
-					<p class="entry"><%= strip_tags(@about.body).truncate_words(105) if @about.present? %></p>
-					<p class="text_center"><%= link_to "CONTINUE", page_path(about), class: "btn btn-default an-btn" if @about.present? %></p>
-				</div>
-				<div class="hidden-xs col-sm-6">
-					<%= image_tag 'about.png', style: 'display: inline; width: 115px; float: left; padding-right: 20px; margin-top: -40px;'%>
-					<div class="thumbnail">
-						<%= image_tag @about.main_image.url(:thumb) if @about.present?%>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+					<div class="entry col-xs-12 text-center">
+						<h3 class="text-center">meditation &middot; yoga &middot; massage &middot; energy work</h3>
 
-	<div class="purple-bg ">
-		<div class="col-xs-12">
-			<div class="container">
-				<div class="row">
-					<div class="birthchart">	
-						<div class="hidden-xs col-xs-12 col-sm-5">
-							<div class="thumbnail">
-								<%= link_to image_tag('birthchart.png'), "http://eepurl.com/cc--Sb" %>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-5 col-sm-offset-1">
-							<h4>BIRTH CHART BOOKS</h4>
-							<p>sign up below to be notified<br />
-							 when birth chart sales<br />
-							 commence again.</p>
-							<%= link_to "SIGN UP", "http://eepurl.com/cc--Sb", class: "btn btn-default an-btn" %>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-xs-12">
-		<div class="container">
-			<div class="row text-center latestvideo">
-				<h4>WATCH THE LATEST ENERGY UPDATE</h4>
-
-				<div class="videoholder">
-					<div class="videoborder">
-						<div class="embed-responsive embed-responsive-16by9">
-						  <%= @video.embed_code.html_safe if @video.present? %>
-						</div>
-					</div>				
-				</div>
-
-				<a href="https://www.youtube.com/user/aquariusnation1111" target="_blank">For more video readings, follow <br />KV's YouTube channel <i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-			</div>
-		</div>
-	</div>
-
-	<div class="purple-bg">
-		<div class="col-xs-12">
-			<div class="container">
-				<div class="row">
-					<div class="apothecary">
-						<div class="col-xs-12 col-sm-5">
-							<h4>AQUARIUS NATION APOTHECARY</h4>
-							<p>Highest Quality Ingredients ALWAYS<br />  
-								Made with LOVE &amp; Healing Intentions in Santa Fe,<br />
-								New Mexico by ROSIE RENARD</p>
-							<%= link_to "SHOP NOW", "https://www.etsy.com/shop/aquariusNATION?ref=si_shop", class: "btn btn-default an-btn" %>
-						</div>
-						<div class="hidden-xs col-sm-5 col-sm-offset-1">
-							<div class="thumbnail">
-								<%= link_to image_tag('apothecary.png'), "https://www.etsy.com/shop/aquariusNATION?ref=si_shop" %>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-xs-12">
-		<div class="container">
-			<div class="row text-center latestitems">
-				<h3>LATEST FROM AQUARIUS NATION</h3>
-				<div class="container">
-					<% @latest_items.each do |latest_item| 
-						@button = !latest_item.button_text.blank? ? latest_item.button_text : 'READ MORE'
-					%>
-						<div class="col-xs-12 col-sm-4">
-							<%= link_to image_tag(latest_item.image.url(:thumb)), latest_item.link, class: 'shop-img' %>
-							<h4><%= link_to latest_item.title, latest_item.link, class: 'shop-title' %></h4>
-							<%= link_to @button, latest_item.link, class: 'btn btn-default an-btn' %>
-						</div>
-
-					<% end %>
-				</div>
-
-				<div class="row text-center insta">
-					<h5>CONNECT WITH AQ</h5>
-					<div class="container">
-						<% @insta.take(4).each do |insta| %>
-						  <div class="col-xs-6 col-sm-3">
-						    <div class="thumbnail">
-						      <a href="<%= insta.link %>" target="_blank">
-						      	<%= image_tag insta.images.thumbnail.url %>
-						      </a>
-						    </div>
-						  </div>
-						<% end %>
+						<p>I provide single session and seasonal packages for one-on-one work, combining yoga, meditation, massage and energy work. </p> 
+						<br /><br />
+						<h4>one session ......... $125</h4>
+						<h4>three sessions ...... $325</h4>
 
 						
+						<h3><br /><br />Three month programs</h3>
+						<p>Consistency creates a personal practice and a depth of connection of your body/mind. This leads to transformation that happens when one is truly commited to the process. </p>
+						<br /><br />
+
+						<h4>12 sessions ......... $2000</h4>
+						<h4>24 sessions ......... $3500</h4>
 					</div>
-					<div class="connect">
-						<a href="https://www.facebook.com/aquariusnationastrology" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-						<a href="https://www.youtube.com/user/aquariusnation1111" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-						<a href="https://www.instagram.com/aquariusnation/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-						<a href="https://plus.google.com/118294992650915534853" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-					</div>
+
+					<div class="entry col-xs-12 text-center button">
+						<%= link_to "WORK WITH ME", contact_path, class: "btn btn-default ha-btn" %>
+					</div> 
+					
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="purple-bg">
 		<div class="col-xs-12">
-			<div class="container">
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-xs-12">
 		<div class="container">
 			<div class="row text-center testimonials">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -284,4 +104,77 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="purple-bg">
+		<div class="col-xs-12">
+			<div class="container">
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12">
+		<div class="container about">
+			<div class="row">
+				
+				<div class="col-xs-12 col-sm-6">
+					<h4 class="text_center">ABOUT HEATHER</h4>
+					<p class="entry">My own journey has ushered me in overcoming anxiety and becoming my true self. I worked for 10 years as a web developer in corporate environments, teaching yoga on the side. I could no longer ignore the pull of my desire to work helping others. I became an LMT (licensed massage therapist) to further my skills in helping nourish and nurture others.</p>
+				</div>
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="thumbnail">
+						<%= image_tag 'heather.png' %>
+					</div>
+				</div> 
+
+				<div class="col-xs-12">
+					<p class="entry">As I continuously refine my ability to bring myself home, I want to help others find compassion and connection - qualities that are abundant within us all. I believe in the potential for change that is living inside each of us. I understand the loss of hope that occurs when pain (physical, emotional or mental) is present. By bringing a more open awareness to the body, I lead clients into a thriving relationship with their inner selves and their greatest potential.</p>
+				</div>
+				
+				
+			</div>
+		</div>
+	</div>		
+
+	<div class="col-xs-12">
+		<div class="container">
+			
+
+				<div class="row text-center insta">
+					
+					<div class="container">
+						<% @insta.take(4).each do |insta| %>
+						  <div class="col-xs-6 col-sm-3">
+						    <div class="thumbnail">
+						      <a href="<%= insta.link %>" target="_blank">
+						      	<%= image_tag insta.images.thumbnail.url %>
+						      </a>
+						    </div>
+						  </div>
+						<% end %>
+						
+					</div>
+					<div class="connect">
+						<a href="https://www.facebook.com/heather.allmaan" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="https://www.instagram.com/ofthefeather/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="purple-bg">
+		<div class="col-xs-12">
+			<div class="container">
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+			</div>
+		</div>
+	</div>
+
+
 </div>
