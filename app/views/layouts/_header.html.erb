@@ -15,21 +15,6 @@
         <li><%# link_to 'FAQ', main_app.list_faq_path %></li>
         <li><%# link_to "BLOG", main_app.blog_path %><li>
 
-      
-        <% if member_signed_in? && @issue.present? && @issue.sidebars.present? %>
-          <li class="dropdown visible-xs">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <% @issue.sidebars.each do |item| %>
-                <% if item.link.blank? %>
-                  <li><%= link_to item.title, moonvibeguide_reading_path(item.podcast_link_id) if item.podcast_link_id.present? %></li>
-                <% else %>
-                  <li><%= link_to item.title, item.link, target: '_blank' %></li>
-                <% end %>
-              <% end %>
-            </ul>
-          </li>
-        <% end %>
 
         
         <% if admin_signed_in? %>
