@@ -70,32 +70,20 @@
 
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
-				  	 <% @testimonials.each_with_index do |testimonial, index| %>
 
-				  	 	<% if index == 0 %>
 			          <div class="item active">
-			       	<% else %>
 								<div class="item">
-			       	<% end %>
 			          	
-			          	<% if testimonial.image.present? %>
 			          		<div class="hidden-xs col-sm-3 pic">
 			          			<div class="thumbnail">
-			           				<%= image_tag(testimonial.image.url(:thumb), class: 'testimonial-img') %>
+			           				<%= image_tag('heather.png', class: 'testimonial-img') %>
 			           			</div>
 			           		</div>
 			           		<div class="col-xs-12 col-sm-9">
-			           			<h3><%= testimonial.title %></h3>
-			          			<%= strip_tags(testimonial.body) %>
+			          			<p>Heather's in depth study of yoga has made her a natural with body and energetic work. Her compassionate heart and loving intentions help her to work with the energetic body in a way that surpasses the effect of manual body work. You will not only feel relaxed muscularly, you will feel a deep inner working towards peace and steadiness that doesn't end when you leave your session. The unraveling continues so that the work continues in your life. This is a rare gift, one that comes from a studied and embodied place. Her hands follow her heart as she responds to yours. There is no judgement just a loving relationship of body, breath, insight and intention. </p>
 			          		</div>
-			          	<% else %>
-										<div class="col-xs-12">
-											<h3><%= testimonial.title %></h3>
-			          			<%= strip_tags(testimonial.body) %>
-			          		</div>
-			          	<% end %>
+			          	
 			          </div>
-			      <% end %>
 			     
 				  </div>
 
