@@ -39,6 +39,9 @@
 
   <%= render 'layouts/header' %>
   <div class="container-fluid"> 
+    <div class="container">
+      <%= render 'layouts/messages' %>
+    </div>
     <%= yield %>
   </div>
   <%=  render 'layouts/footer' %> 
