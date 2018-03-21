@@ -34,8 +34,10 @@ gem "font-awesome-rails"
 gem "autoprefixer-rails"
 
 # Opens email in browser during dev
-#gem "letter_opener", group: :development
+gem "letter_opener", group: :development
 
+# Get member info from MailChimp
+gem 'mailchimp-api', require: 'mailchimp'
 
 # Gibbon is the MailChimp API wrapper
 gem 'gibbon', '~> 2.2.4'
@@ -62,6 +64,8 @@ gem 'closure_tree'
 gem 'instagram'
 
 gem 'social_shares'
+
+gem 'thredded', '~> 0.11.0'
 
 # helps Thredded display user profile information
 gem 'backport_new_renderer'
