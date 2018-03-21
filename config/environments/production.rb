@@ -89,23 +89,24 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
 
-  config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: 'gmail.com',
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: ENV['GMAIL_UN'],
-    password: ENV['GMAIL_PW']
-  }
-
   # config.action_mailer.smtp_settings = {
-  #   :address => "email-smtp.us-west-2.amazonaws.com",
-  #   :user_name =>  ENV['AWS_SMTP_USER'], # Your SMTP user here.
-  #   :password => ENV['AWS_SMTP_PASSWORD'], # Your SMTP password here.
-  #   :authentication => :login,
-  #   :enable_starttls_auto => true
+  #   address: "smtp.gmail.com",
+  #   port: 587,
+  #   domain: 'gmail.com',
+  #   authentication: "plain",
+  #   enable_starttls_auto: true,
+  #   user_name: ENV['GMAIL_UN'],
+  #   password: ENV['GMAIL_PW']
   # }
+
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :user_name =>  ENV['GMAIL_UN'], # Your SMTP user here.
+    :password => ENV['GMAIL_PW'], # Your SMTP password here.
+    :authentication => :login,
+    :enable_starttls_auto => true
+  }
 
   # config.paperclip_defaults = {
   #   :storage => :s3,
