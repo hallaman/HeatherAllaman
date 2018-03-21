@@ -4,9 +4,6 @@ ruby '2.2.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
 
-# this may cause problems
-gem 'rails_12factor'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -39,8 +36,6 @@ gem "autoprefixer-rails"
 # Opens email in browser during dev
 gem "letter_opener", group: :development
 
-# Get member info from MailChimp
-gem 'mailchimp-api', require: 'mailchimp'
 
 # Gibbon is the MailChimp API wrapper
 gem 'gibbon', '~> 2.2.4'
@@ -67,8 +62,6 @@ gem 'closure_tree'
 gem 'instagram'
 
 gem 'social_shares'
-
-gem 'thredded', '~> 0.11.0'
 
 # helps Thredded display user profile information
 gem 'backport_new_renderer'
