@@ -81,40 +81,40 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  Rails.application.routes.default_url_options[:host] = 'aquariusnation.heroku.com'
+  Rails.application.routes.default_url_options[:host] = 'heatherallaman.com'
 
-  config.action_mailer.default_url_options = { :host => 'aquariusnation.heroku.com' }
+  config.action_mailer.default_url_options = { :host => 'heatherallaman.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
 
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: 'gmail.com',
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: Rails.application.secrets.gmail_un,
+    password: Rails.application.secrets.gmail_pw
+  }
+
   # config.action_mailer.smtp_settings = {
-  #   address: "smtp.gmail.com",
-  #   port: 587,
-  #   domain: 'gmail.com',
-  #   authentication: "plain",
-  #   enable_starttls_auto: true,
-  #   user_name: 'moonvibetribe@gmail.com',
-  #   password: ENV["GMAIL_PASSWORD"]
+  #   :address => "email-smtp.us-west-2.amazonaws.com",
+  #   :user_name =>  ENV['AWS_SMTP_USER'], # Your SMTP user here.
+  #   :password => ENV['AWS_SMTP_PASSWORD'], # Your SMTP password here.
+  #   :authentication => :login,
+  #   :enable_starttls_auto => true
   # }
 
-  config.action_mailer.smtp_settings = {
-    :address => "email-smtp.us-west-2.amazonaws.com",
-    :user_name =>  ENV['AWS_SMTP_USER'], # Your SMTP user here.
-    :password => ENV['AWS_SMTP_PASSWORD'], # Your SMTP password here.
-    :authentication => :login,
-    :enable_starttls_auto => true
-  }
-
-  config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_host_name => 's3-us-west-2.amazonaws.com',
-    :s3_credentials => {
-      :bucket => ENV['AWS_BUCKET'],
-      :access_key_id => ENV['AWS_KEY_ID'],
-      :secret_access_key => ENV['AWS_ACCESS_KEY'],
-      :s3_region => 'us-west-2'
-    }
-  }
+  # config.paperclip_defaults = {
+  #   :storage => :s3,
+  #   :s3_host_name => 's3-us-west-2.amazonaws.com',
+  #   :s3_credentials => {
+  #     :bucket => ENV['AWS_BUCKET'],
+  #     :access_key_id => ENV['AWS_KEY_ID'],
+  #     :secret_access_key => ENV['AWS_ACCESS_KEY'],
+  #     :s3_region => 'us-west-2'
+  #   }
+  # }
 end

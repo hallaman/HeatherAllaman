@@ -34,7 +34,7 @@ gem "font-awesome-rails"
 gem "autoprefixer-rails"
 
 # Opens email in browser during dev
-gem "letter_opener", group: :development
+#gem "letter_opener", group: :development
 
 
 # Gibbon is the MailChimp API wrapper
