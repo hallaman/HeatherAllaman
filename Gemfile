@@ -65,7 +65,7 @@ gem 'instagram'
 
 gem 'social_shares'
 
-gem 'thredded', '~> 0.11.0'
+# gem 'thredded', '~> 0.11.0'
 
 # helps Thredded display user profile information
 gem 'backport_new_renderer'

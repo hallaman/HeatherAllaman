@@ -18,8 +18,6 @@
 //= require summernote
 //= require turbolinks
 
-//= require thredded
 //= require jquery_ujs
-
 
 //= require_tree .

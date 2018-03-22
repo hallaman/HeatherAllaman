@@ -33,27 +33,6 @@ class ApplicationController < ActionController::Base
     @about = Page.where(name: 'About KV').last
   end
 
-  def after_sign_in_path_for(resource)
-    case resource
-    when :member, Member
-      thredded_path
-    when :admin, Admin
-      issues_path
-    else
-      super
-    end
-	end
-
-	def after_sign_out_path_for(resource)
-    case resource
-    when :member, Member
-      moonvibeguide_path
-    when :admin, Admin
-      new_admin_session_path
-    else
-      super
-    end
-	end
 
 	def set_locale
     I18n.locale = params[:locale]
