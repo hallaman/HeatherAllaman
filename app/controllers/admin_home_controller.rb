@@ -2,8 +2,6 @@ class AdminHomeController < ApplicationController
 	before_action :authenticate_admin!
 
   def index
-    @newsbar = Newsbar.last
-
     @testimonials = Testimonial.where(show: true)
 
   end

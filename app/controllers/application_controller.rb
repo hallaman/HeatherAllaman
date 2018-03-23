@@ -45,10 +45,6 @@ class ApplicationController < ActionController::Base
   private
 
   def layout_by_resource
-    if devise_controller?
-      "moon_vibe_guide"
-    else
-      "application"
-    end
+    "application"
   end
 end

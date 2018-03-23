@@ -1,0 +1,34 @@
+<div class="container">
+
+  <h4 class="bold-gold text-center">Testimonials</h4>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Body</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @testimonials.each do |testimonial| %>
+        <tr>
+          <td>
+            <h5><%= testimonial.title %></h5>
+            <%= testimonial.body.html_safe %>
+          </td>
+          <td><%= link_to 'Edit', edit_testimonial_path(testimonial) %></td>
+          <td><%= link_to 'Delete', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <p class="text-center">
+    <%= link_to 'New Testimonial', new_testimonial_path, class: 'btn btn-default' %>
+    <%= link_to 'View All', testimonials_path, class: 'btn btn-success' %>
+  </p>
+
+</div>
+
+
