@@ -4,7 +4,7 @@ class Admins::RegistrationsController < Devise::RegistrationsController
   before_action :authorize_admin
 
   def authorize_admin
-    redirect_to index_path, alert: 'Access Denied' unless admin_signed_in?
+    #redirect_to index_path, alert: 'Access Denied' unless admin_signed_in?
   end
 
   # GET /resource/sign_up
