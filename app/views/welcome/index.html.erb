@@ -62,52 +62,47 @@
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 						<!-- Indicators -->
 					  <ol class="carousel-indicators">
-					    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					    <li data-target="#myCarousel" data-slide-to="1"></li>
-    					<li data-target="#myCarousel" data-slide-to="2"></li>
+					  	<% @testimonials.each_with_index do |testimonial, index| %>
+					  		<% if index == 0 %>
+					        <li data-target="#myCarousel" data-slide-to="<%= index %>" class="active"></li>
+					     	<% else %>
+									<li data-target="#myCarousel" data-slide-to="<%= index %>"></li>
+					     	<% end %>
+					    <% end %>
 					  </ol>
 
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
+				  	 <% @testimonials.each_with_index do |testimonial, index| %>
 
-							<div class="item active">
-	           		<div class="col-xs-12">
-	           			<div class="col-xs-12 col-sm-4 pic">
-		           			<%= image_tag('jen.png', class: 'testimonial-img') %>
-		           		</div>
-	          			<p>Heather's in depth study of yoga has made her a natural with body and energetic work. Her compassionate heart and loving intentions help her to work with the energetic body in a way that surpasses the effect of manual body work. You will not only feel relaxed muscularly, you will feel a deep inner working towards peace and steadiness that doesn't end when you leave your session. The unraveling continues so that the work continues in your life. This is a rare gift, one that comes from a studied and embodied place. Her hands follow her heart as she responds to yours. There is no judgement just a loving relationship of body, breath, insight and intention.<br />  <b>-Jennifer <a href="http://campbellyoga.com/">campbellyoga.com</a></b></p>
-	          		</div>
-	          	</div>
-
-							<div class="item">
-	           		<div class="col-xs-12">
-	           			<div class="col-xs-12 col-sm-4 pic">
-		           			<%= image_tag('katie.png', class: 'testimonial-img') %>
-		           		</div>
-	          			<p>I've been lucky enough to have met with Heather for a variety of therapies in every trimester of my pregnancy. I've been able to see the benefits across the board for specific issues/ problems I've experience over the last 9 months.</p>
-
-									<p>In my first trimester, I was very sick. I experienced "morning sickness" very early on, lasting for much longer than is typical for the average pregnant woman -- or at least that's what my midwife ensured me of. That said, I had extreme lower back pain due to spending many evenings hunched over on a cold floor. Along with the back pain, my muscles were tight and tense. Massage was so helpful during this time. Just having my back, shoulders and neck worked on was extremely effective in relieving that tension and helping me feel less tight overall. Getting the blood moving and releasing the knots in my shoulders helped my sleep during that time as well. Something I struggled with through out my pregnancy.</p>
-
-									<p>In to my second trimester, we tried some massage and craniosacral therapy focusing on my hips and near my belly. As I started feeling the effects of the increased relaxin hormone in my body, I was feeling more pain in my low back and hips and generally was feeling more overall body soreness. Having Heather focus in on those areas felt fantastic and anytime she focused energy near my belly, my daughter would kick -- which was a really great experience. I felt like my daughter was getting benefits from this touch as well. I could really feel the positive effects of the massage for days after my appointments. I sleep better, had less specific pain-points and was overall more positive because my body simply felt better.</p>
-
-									<p>Finally, in my third trimester, I have been dealing with a lot of water retention and swelling in my lower legs, ankles, and feet, as well as, cramping. This had been made worse because of the long commutes required for work. During this time, Heather focused on helping to move that extra fluid around my legs and focusing massage on my feet. I have to say that this has been the most effective way to decrease the pain and swelling. I've tried salt baths, keeping my feet elevated, compression socks, drinking a ton of water, avoiding salt, etc. and nothing helped like massage.</p>
-
-									<p>I can't say enough for how helpful Heather's massage and various therapies have been through out my pregnancy. I am so grateful to have been able to see her so often and am not sure how I would have made it to 9 months without her help. <br />  <b>-Katie <a href="http://arroyodesignhouse.com/">arroyodesignhouse.com</a></b></p>
-	          		</div>
-	          	</div>
-
-	          	<div class="item">
-	           		<div class="col-xs-12">
-	           			<div class="col-xs-12 col-sm-4 pic">
-		           			<%= image_tag('mb.png', class: 'testimonial-img') %>
-		           		</div>
-	          			<p>The most discernible benefits I've received from working with Heather are relief from muscle tension and stress. However, I have also noticed more subtle changes after a session as well. Along with being incredibly relaxing, massage and craniosacral therapy have also helped improve my mood.</p>
-
-									<p>My energy is elevated and I am less likely to get irritated with everyday stresses for long periods of time after sessions. As a yoga practitioner and teacher in training I have also noticed that my sensitivity to the energy around me increases after a craniosacral session. I feel more attune to the energy of those around me after a session and I believe this will help me when approaching students in class. <br />  <b>-Mary Beth</b></p>
-	          		</div>
-	          	</div>
+				  	 	<% if index == 0 %>
+			          <div class="item active">
+			       	<% else %>
+								<div class="item">
+			       	<% end %>
+			          	
+			          	<% if testimonial.image.present? %>
+			          		<div class="hidden-xs col-sm-3 pic">
+			          			<div class="thumbnail">
+			           				<%= image_tag(testimonial.image.url(:thumb), class: 'testimonial-img') %>
+			           			</div>
+			           		</div>
+			           		<div class="col-xs-12 col-sm-9">
+			           			<h3><%= testimonial.title %></h3>
+			          			<%= strip_tags(testimonial.body) %>
+			          		</div>
+			          	<% else %>
+										<div class="col-xs-12">
+											<h3><%= testimonial.title %></h3>
+			          			<%= strip_tags(testimonial.body) %>
+			          		</div>
+			          	<% end %>
+			          
+			      			<% end %>
+							</div>
 
 					</div>
+
 				</div>	
 			</div>
 		</div>
