@@ -7,7 +7,8 @@
     <div class="field">
       <%= f.label "Image" %><br>
       <%= f.file_field :image %>
-      <%= image_tag @testimonial.image.url(:image) %>
+      <%= image_tag @testimonial.image.url(:thumb) %>
+
     </div>
     
     <%= f.input :show %>
