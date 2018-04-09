@@ -64,8 +64,8 @@ a {
   }
 }
 
-a.logo {
-  display: inline-block;
+.logo {
+  max-width: 200px !important;
 }
 
 ul {
@@ -81,6 +81,10 @@ hr.gold-line {
   opacity: .3;
   border-top: 0;
   z-index: 1;
+}
+
+.navbar {
+  background-color: #4a163d;
 }
 
 .badge {
@@ -136,17 +140,6 @@ div {
   position: relative;
 }
 
-a.logo {
-  max-width: 550px !important;
-  width: 100%;
-  height: auto;
-}
-
-.mvg-logo {
-  font-family: 'MANIFESTO';
-  color: $gold !important;
-  font-size: 3em;
-}
 
 .ha-btn {
   background-color: transparent;
@@ -246,8 +239,6 @@ a.logo {
   }
 }
 
-
-
 .share {
   background-color: $soft-pink;
   box-shadow: 0px 0px 3px 0px $light-mauve;
@@ -330,13 +321,6 @@ a.logo {
   }
 }
 
-.nav-tabs {
-  margin: 0px auto;
-  text-align: center;
-  border-bottom: none;
-  padding: 10px 12px;
-}
-
 .nav > li > a {
   padding: 15px 10px;  
 }
@@ -351,36 +335,9 @@ a.logo {
 
 .nav > li > a:hover, 
 .nav > li > a:focus {
-  background-color: $soft-pink;
+  color: $soft-pink !important;
   opacity: .6;
   transition: opacity .5s ease forward;
-}
-
-
-.nav-tabs > li.active > a, 
-.nav-tabs > li.active > a:hover, 
-.nav-tabs > li.active > a:focus {
-  color: $gold;
-  background-color: $soft-pink;
-  border-bottom: 2px solid $gold;
-  border-top: transparent;
-  border-left: transparent;
-  border-right: transparent;
-  cursor: default;
-}
-
-
-.nav-tabs > li {
-  padding-left: 0;
-  float: none;
-  display: inline-block;
-}
-
-.nav-tabs > li > a {
-  margin-right: 0px;
-  line-height: 1.42857143;
-  border: none;
-  padding: 10px 12px;
 }
 
 .tab-content {
@@ -523,50 +480,14 @@ a.logo {
 }
 
 
-@media (min-width: 768px) and (max-width: 900px) {
-  .nav-tabs > li > a {
-    padding: 10px;
-    font-size: 1em;
-  }
-}
-
-
 @media (min-width: 767px) {  
-
-  a.logo {
-    padding: 14px 0 0 !important;
-
-    img {
-      padding: 8px 0 0 0;
-    }
-  }
 
   ul.dropdown{
     padding-top: 6px;
   }
 } 
 
-@media (max-width: 991px) {
-
-  .mvg-logo {
-    font-size: 2.5em;
-  }
-
-}
-
 @media (max-width: 767px) {
-
-  .logo img {
-    padding-top: 25px;
-  }
-
-  .mvg-logo {
-    font-size: .9em;
-  }
-
-  ul.navbar-right {
-    text-align: center;
-  }
 
   .links-center {
     display: block !important;
@@ -588,10 +509,6 @@ a.logo {
 
 
 @media (max-width: 414px) {
-
-  .logo img {
-    max-width: 360px;
-  }
 
   // Align text to center.
   .text-xs-center {

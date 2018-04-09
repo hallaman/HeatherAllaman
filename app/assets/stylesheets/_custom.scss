@@ -74,34 +74,24 @@ $notification-error: $light-gray-purple;
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #fff;
+  background-color: $light-mauve;
 }
 
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-  color: $gold;
+  color: $white;
 }
 
 .navbar-default {
   background-color: transparentize(#ffffff, .7);
   border: none;
-
-  .moon_guide_title {
-    padding: 15px;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-}
-
-.navbar-brand {
-  transform: translateX(-50%);
-  left: 53%;
-  position: absolute;
-  top: 8px;
 }
 
 .navbar-collapse {
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-toggle {
