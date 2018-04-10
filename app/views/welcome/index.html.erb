@@ -2,16 +2,11 @@
 	<div id="home_header" class="col-xs-12">
 		<%= image_tag('louise.png', style: 'visibility: hidden; width: 100%; height: auto;') %>
 	</div>
-	<div class="col-xs-12">
-		<div class="container">
-			<div class="row manifesto">
-				<h4 class="text-center">Do you have trouble clearing yourself of your day/thoughts/work? </h4>
-				<h4 class="text-center">Are you ready to live with more ease and enjoyment? </h4>
-				<h4 class="text-center">Are you open and willing to hear the wisdom of your body?</h4>
 
-			</div>
-		</div>
+	<div class="col-xs-12 work-header">
+		<h4 class="text-center">WAYS TO WORK WITH HEATHER</h4>
 	</div>
+
 	
 	<div class="purple-bg" id="work">
 		<div class="col-xs-12">
@@ -55,6 +50,54 @@
 			</div>
 		</div>
 	</div>
+
+
+
+	<div class="col-xs-12">
+		<div class="container about" id="about">
+			<div class="row">
+				
+				<div class="col-xs-12 col-sm-6">
+					<h4 class="text_center">ABOUT HEATHER</h4>
+					<p class="entry">My own journey has ushered me in overcoming anxiety and becoming my true self. I worked for 10 years as a web developer in corporate environments, teaching yoga on the side. I could no longer ignore the pull of my desire to work with the body. I became an LMT (licensed massage therapist) to further my skills in helping nourish and nurture others.</p>
+				</div>
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="thumbnail">
+						<%= image_tag 'heather.png' %>
+					</div>
+				</div> 
+
+				<div class="col-xs-12">
+					<p class="entry"> Teaching yoga since 2012, I have been drawn towards the principles embodied by Ashtanga yoga. Traveling to study in Thailand with Richard Freeman opened my senses to teach focused a slower movement and more internal focus.
+					</p>
+				</div>
+
+				<div class="col-xs-12">
+					<p class="entry">As I continuously refine my ability to bring myself home, I want to help others find compassion and connection - qualities that are abundant within us all. I believe in the potential for change that is living inside each of us. I understand the loss of hope that occurs when pain (physical, emotional or mental) is present. By bringing a more open awareness to the body, I lead clients into a thriving relationship with their inner selves and their greatest potential.</p>
+				</div>
+				
+				
+			</div>
+		</div>
+
+
+	<div class="col-xs-12 manifesto">
+		<div class="container">
+			<div class="row">
+				
+				<!-- <h4 class="text-center">Do you have trouble clearing yourself of your day/thoughts/work? </h4>
+				<h4 class="text-center">Are you ready to live with more ease and enjoyment? </h4> -->
+				<h4 class="text-center">Are you ready to feel better and unlock the wisdom of your body?</h4>
+
+				<div class="entry col-xs-12 text-center button">
+					<%= link_to "SCHEDULE A FREE CONSULTATION", contact_path, class: "btn btn-default ha-btn" %>
+				</div> 
+
+			</div>
+		</div>
+	</div>
+	
 
 	<div class="col-xs-12">
 		<div class="container">
@@ -107,49 +150,12 @@
 		</div>
 	</div>
 
-	<div class="purple-bg">
-		<div class="col-xs-12">
-			<div class="container">
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-xs-12">
-		<div class="container about" id="about">
-			<div class="row">
-				
-				<div class="col-xs-12 col-sm-6">
-					<h4 class="text_center">ABOUT HEATHER</h4>
-					<p class="entry">My own journey has ushered me in overcoming anxiety and becoming my true self. I worked for 10 years as a web developer in corporate environments, teaching yoga on the side. I could no longer ignore the pull of my desire to work with the body. I became an LMT (licensed massage therapist) to further my skills in helping nourish and nurture others.</p>
-				</div>
-
-				<div class="col-xs-12 col-sm-6">
-					<div class="thumbnail">
-						<%= image_tag 'heather.png' %>
-					</div>
-				</div> 
-
-				<div class="col-xs-12">
-					<p class="entry"> Teaching yoga since 2012, I have been drawn towards the principles embodied by Ashtanga yoga. Traveling to study in Thailand with Richard Freeman opened my senses to teach focused a slower movement and more internal focus.
-					</p>
-				</div>
-
-				<div class="col-xs-12">
-					<p class="entry">As I continuously refine my ability to bring myself home, I want to help others find compassion and connection - qualities that are abundant within us all. I believe in the potential for change that is living inside each of us. I understand the loss of hope that occurs when pain (physical, emotional or mental) is present. By bringing a more open awareness to the body, I lead clients into a thriving relationship with their inner selves and their greatest potential.</p>
-				</div>
-				
-				
-			</div>
-		</div>
+	
 	</div>		
 
 	<div class="col-xs-12">
 		<div class="container">
 			
-
 				<div class="row text-center insta">
 					
 					<div class="container">
@@ -164,48 +170,10 @@
 						<% end %>
 						
 					</div>
-					<div class="connect">
-						<a href="https://www.facebook.com/heather.allmaan" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-						<a href="https://www.instagram.com/ofthefeather/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-					</div>
+					
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<!-- <div class="purple-bg moonplanner">
-		<div class="col-xs-12">
-			<div class="container">
-				<div class="row">
-					<div class="moonplanner">
-						<div class="hidden-xs col-sm-5">
-							<div class="thumbnail">
-								<a href="http://www.themoonplanner.com" target="_blank"><%# image_tag('moonplanner.png') %></a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-5 col-sm-offset-1">
-							<h4>MOON PLANNER <br /> 2017</h4>
-							<p>Aquarius Nation &amp; Star Mandalas<br />
-							 Bringing you a 2017<br />
-							 energetic forecast</p>
-							<%# link_to "READ MORE", "http://www.themoonplanner.com", class: "btn btn-default an-btn", target: '_blank' %>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<div class="purple-bg">
-		<div class="col-xs-12">
-			<div class="container">
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-			</div>
-		</div>
-	</div>
-
 
 </div>

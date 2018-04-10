@@ -21,10 +21,15 @@
   width: 100%;
 }
 
+.work-header {
+  background-color: $beige;
+  padding: 20px 0;
+}
+
 .manifesto {
+  background-color: $beige;
 	h4 {
-    font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
-    font-size: 1.5em;
+    font-size: 2em;
 		line-height: 2em;
 	}
 }
@@ -114,7 +119,7 @@
 }
 
 .purple-bg {
-	background-image: image-url('mtn_bg.jpg');
+	background-color: $light-beige;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -123,6 +128,10 @@
   width: 100%;
   color: $blackish; 
   font-weight: bold;
+
+  h4 {
+    color: $blackish;
+  }
 }
 
 .moonvibetribe {

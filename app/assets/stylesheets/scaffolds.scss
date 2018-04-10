@@ -31,18 +31,16 @@ body {
 
 
 h1, h2, h3 {
-  font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
   font-weight: 400;
   margin: 0;
   padding-bottom: 10px;
 }
 
 h4 {
-  font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   margin: 0;
   line-height: 1.5em;
-  color: $gold;
+  color: $white;
 }
 
 b {
@@ -84,7 +82,7 @@ hr.gold-line {
 }
 
 .navbar {
-  background-color: #4a163d;
+  background-color: $purple;
 }
 
 .badge {
@@ -143,14 +141,14 @@ div {
 
 .ha-btn {
   background-color: transparent;
-  color: $blackish;
+  color: $white;
   border-radius: 0;
-  padding: 12px 0px 9px;
-  margin-top: 5px;
+  padding: 12px 15px 9px;
+  margin-top: 25px;
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.4em;
-  border: 2px solid $blackish;
-  width: 185px;
+  font-size: 1.3em;
+  border: 2px solid $white;
+  width: auto;
 }
 
 .btn-pink,
@@ -370,102 +368,47 @@ div {
 }
 
 .footer {
-  font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
-  .row {
-    padding: 20px 0;
+  background-color: $purple;
+  padding: 20px;
+  color: $white;
 
-    h4 {
-      font-size: 1.3em;
-    }
-    p {
-      font-size: 1em;
-    }
-  }
-  .bottom {
-    padding-top: 20px;
-    margin-bottom: 0px;
-  }
-}
-
-.subscribe-footer {  
-  .container {
-    margin: 0px auto;
-    text-align: center;
-    
-  }
-  h4 {
-    padding-top: 0;
-    padding-bottom: 20px;
-  }
-
-  .links-center {
+  .footer-flex {
     display: flex;
     align-items: center;
-    height: 258px;
-  }
+    justify-content: space-between;
+    flex-direction: column;
+    width: 95%;
 
-  .footer-links {
-    text-align: left;
-    p a {
-      color: $white;
+    .schedule {
+      align-self: flex-end;
+
+      h4 {
+        padding-bottom: 10px;
+      }
+
+      p {
+        text-align: left;
+      }
+
+      a {
+        color: $white;
+      }
+    }
+    .bottom {
+      align-self: flex-start;
+      text-align: left;
+      width: 100%;
+      padding: 20px 0 0 0;
+      margin-bottom: 0px;
     }
   }
 
-  #mc_embed_signup {
-    background:#fff; 
-    clear: left; 
-    color: $blackish;
-    max-width: 500px;
-    padding: 30px;
-    margin: 0px auto;
-    text-align: center;
-    font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
-
-    p {
-      max-width: 330px;
-      margin: 0px auto 20px;
-      text-align: center;
-    }
-
-    .an-btn {
-      background-color: #000;
-      color: #fff;
-    }
-
-    .email {
-      color: $gold !important;
-      border: 1px solid $gold;
-      border-radius: 0px;
-      max-width: 380px;
-      margin: 0px auto;
-      text-align: center;
-
-      ::-webkit-input-placeholder {
-         color: $gold !important;
-         text-align: center;
-         margin: 0px auto;
-      }
-
-      :-moz-placeholder { /* Firefox 18- */
-         color: $gold !important;
-         text-align: center;
-         margin: 0px auto;
-      }
-
-      ::-moz-placeholder {  /* Firefox 19+ */
-         color: $gold !important;
-         text-align: center;
-         margin: 0px auto; 
-      }
-
-      :-ms-input-placeholder {  
-         color: $gold !important;
-         text-align: center;
-         margin: 0px auto; 
-      }
-    }
+  p {
+    font-size: 1em;
+    line-height: .75em;
   }
 
+  
 }
 
 
@@ -494,9 +437,6 @@ div {
     height: auto;
   }
 
-  .footer-links {
-    text-align: center !important;
-  }
 
 }
 
@@ -509,6 +449,10 @@ div {
 
 
 @media (max-width: 414px) {
+
+  .schedule {
+    align-self: center;
+  }
 
   // Align text to center.
   .text-xs-center {
