@@ -6,10 +6,6 @@ html {
 
 }
 
-body#mvg {
-  margin: 0 auto 260px auto;
-}
-
 body {
   background-color: $white;
   color: $blackish;
@@ -36,10 +32,28 @@ h1, h2, h3 {
   padding-bottom: 10px;
 }
 
+h2 {
+  font-family: 'Work Sans', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  color: $purple;
+}
+
+h3 {
+  font-family: 'Work Sans', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1em;
+  color: $blackish;
+  margin-top: 1em;
+}
+
 h4 {
   font-weight: 500;
   margin: 0;
-  line-height: 1.5em;
+  line-height: .5em;
   color: $white;
 }
 
@@ -67,11 +81,23 @@ a {
 }
 
 ul {
-  padding: 0;
+  padding: 0 0 0 18px;;
 
   li {
     padding: 4px 0;
   }
+}
+
+.border-left {
+  border-left: 3px solid $purple !important;
+  border-top: 0;
+  z-index: 1;
+}
+
+.border-right {
+  border-right: 3px solid $beige !important;
+  border-top: 0;
+  z-index: 1;
 }
 
 hr.gold-line {

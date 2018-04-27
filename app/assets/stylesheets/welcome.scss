@@ -34,32 +34,6 @@
 	}
 }
 
-.testimonials {
-  p {
-    font-size: 1.1em;
-  }
-}
-
-.readmore {
-  width: 100%;
-  margin: 0px auto;
-  text-align: center;
-  border-top: 1px solid $gold;
-  overflow: hidden;
-  position:relative;
-  display: block;
-  background-image: image-url('read_more.png');
-  background-repeat: no-repeat;
-  background-position: center 32px;
-  background-size: 190px;
-  height: 200px;
-
-  .an-btn {
-    margin: 0;
-    border: 1px solid $gold;
-    color: $gold;
-  }
-}
 
 .about {
   display: flex;
@@ -67,9 +41,8 @@
   align-items: center;
 
   .thumbnail img {
-    align-self: center;
-    padding-top: 40px;
-    width: 230px;
+    border-radius: 50%;
+    padding-right: 40px;
   }
 
   .row {
@@ -84,41 +57,8 @@
   }
 }
 
-.latestvideo {
-  h4 {
-    padding-bottom: 15px;
-  }
 
-  a {
-    color: $blackish;
-    text-transform: capitalize;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    margin-top: 15px;
-    display: block;
-    font-weight: 400;
-  }
-
-  .videoholder {
-
-    background-image: image-url('youtube_border.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top center;
-    margin: 0px auto;
-    text-align: center;
-
-    .videoborder {
-      border-top: 1px solid #b3b2b2;
-      border-bottom: 1px solid #b3b2b2;
-      max-width: 460px;
-      margin: 0px auto;
-      padding: 30px 0;
-    }
-  }
-}
-
-.purple-bg {
+.beige-bg {
 	background-color: $light-beige;
   background-size: cover;
   background-repeat: no-repeat;
@@ -134,79 +74,6 @@
   }
 }
 
-.moonvibetribe {
-  .row {
-    height: 360;
-  }
-  
-
-  h3 {
-    font-family: "MANIFESTO";
-    margin-top: 0px;
-  }
-
-  .entry {
-    padding: 15px 20px;
-  }
-  .an-btn {
-    background-color: transparent;
-    border: 1px solid $white;
-    color: $white;
-  }
-
-  .button {
-    padding-bottom: 0;
-    margin: 0px auto;
-    text-align: center;
-  }
-}
-
-.birthchart,
-.moonplanner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  h4 {
-    font-size: 2.4em;
-  }
-
-   p {
-    line-height: 2.4em;
-    padding: 15px 0;
-    font-weight: 300;
-    margin: 0px auto;
-  }
-
-  .an-btn {
-    background-color: transparent;
-    border: 1px solid $white;
-    color: $white;
-  }
-
-}
-
-
-
-.apothecary {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  p {
-    line-height: 2.6em;
-    font-size: 1.2em;
-    padding: 10px 0;
-    font-weight: 300;
-  }
-  .an-btn {
-    background-color: transparent;
-    border: 1px solid $white;
-    color: $white;
-  }
-
-}
-
 .latestitems {
   h3, h5 {
     font-family: 'MANIFESTO';
@@ -214,30 +81,11 @@
     margin-bottom: 0;
   }
 
-  .an-btn {
-    width: 180px;
-    margin-bottom: 40px;
-  }
-
-  .col-sm-4 {
-    padding: 0;
-  }
-
   .container  {
     border-top: 1px solid rgba($gold, .3);
     border-bottom: 1px solid rgba($gold, .3);
     margin: 0px auto;
     padding: 0;
-  }
-
-  .shop-img {
-    margin: 15px 0;
-    display: inline-block;
-    overflow: hidden;
-    img {
-      width: 180px;
-      height: 180px;
-    }
   }
 
   h4 {
@@ -267,43 +115,11 @@
   }
 }
 
-.connect {
-  padding: 20px 0 0;
-  a {
-    margin: 5px;
-
-    i.fa {
-      color: $white;  
-      width: 30px;
-      padding: 10px 5px 10px 6px; 
-      background-color: #333;
-      border-radius: 100%;
-    }
-
-    i.fa:hover {
-      background-color: #eee;
-      color: $blackish;
-      transition: .2s all ease-in-out;
-    }
-  }
-}
 
 .testimonials {
 
   .carousel-indicators {
     bottom: -40px
-  }
-
-  .thumbnail {
-    margin: 35px 0;
-    display: inline-block;
-    overflow: hidden;
-    border-radius: 0;
-    
-  }
-  .testimonial-img {
-    width: 180px;
-    height: 180px;
   }
 
   .item {
@@ -312,12 +128,18 @@
     justify-content: center;
     align-items: center;
 
-    font-size: 1.2em;
-    line-height: 2em;
+    font-size: 1.4em;
+    line-height: 2.2em;
+    color: $beige;
   }
 
-  h3 {
-    font-size: 3em;
+  h2 {
+    color: $beige;
+    padding-left: 25px;
+  }
+
+  .sig {
+    text-transform: uppercase;
   }
 }
 
