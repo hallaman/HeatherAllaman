@@ -17,6 +17,37 @@
 				<div class="row">
 
 					<div class="entry col-xs-12 col-md-3 text-left">
+						<h2>Single Session</h2>
+					</div>
+
+					<div class="entry col-xs-12 col-md-9 text-right border-left">
+						<div class="text-left" style="padding-left: 30px;">
+							<p>Try a little bit of everything at once. </p>
+
+							<h3>What's included:</h3>
+							<ul>
+								<li>1 mini massage session (<%= link_to "see below for details", welcome_path(anchor: 'about-work') %>)
+								<li>1 mini yoga session (<%= link_to "see below for details", welcome_path(anchor: 'about-work') %>)</li>
+								<li>a short, personalized meditation for connecting to your core energy</li> 
+							</ul>
+
+							<p><b>$125 for 90 minutes</b></p>
+						</div>
+
+						
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="beige-bg" id="work">
+		<div class="col-xs-12">
+			<div class="container">
+				<div class="row">
+
+					<div class="entry col-xs-12 col-md-3 text-left">
 						<h2>Package 1</h2>
 					</div>
 
@@ -50,14 +81,54 @@
 		</div>
 	</div>
 
+		<div class="beige-bg" id="work">
+		<div class="col-xs-12">
+			<div class="container">
+				<div class="row">
+
+					<div class="entry col-xs-12 col-md-3 text-left">
+						<h2>Package 2</h2>
+					</div>
+
+					<div class="entry col-xs-12 col-md-9 text-right border-left">
+						<div class="text-left" style="padding-left: 30px;">
+							<p>Maybe it's hard for you to find time to get to a yoga class, for one reason or another. Maybe the environment of a class just does not work for you. You believe in the benefits of a personal practice and desire a deep connection with yourself. </p>
+
+							<h3>What's included:</h3>
+							<ul>
+								<li>8 massage sessions (<%= link_to "see below for details", welcome_path(anchor: 'about-work') %>)
+								<li>16 yoga sessions (<%= link_to "see below for details", welcome_path(anchor: 'about-work') %>)</li>
+							</ul>
+
+							<h3>This package is for you, if...</h3>
+							<ul>
+								<li>You are feeling a deep desire to connect with a greater source</li>
+								<li>You understand that creating change in your body is no quick fix,  patience and consistency are required</li>
+								<li>You REALLY want to create transformation in your body and mind</li>
+								<li>You would like to feel more flexibility and stability in your body</li>
+								<li>You want to dive deeper into creating a personal practice</li>
+							</ul>
+
+							<p><b>$3500 for 12 weeks of bi-weekly sessions and support</b></p>
+						</div>
+
+						
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
 	
 	<div id="work">
 		<div class="col-xs-12">
 			<div class="container">
 				<div class="row">
-					<h3 class="text-center" id="about-work">ABOUT MY WORK</h3>
+					<h3 class="text-left" id="about-work">ABOUT MY WORK</h3>
 
-					<div class="entry col-xs-12 text-center">
+					<div class="entry col-xs-12 text-left">
 						<p>Essentially, I coach my clients into bodily awareness. Why is this important? Our bodies hold intelligence beyond what we've traditionally been taught but that has been studied for thousands of years in a system called Yoga. This focus also brings us into a state of peace that is often lost in our world that values immediacy and action. I will teach you how to slow down.  </p>
 
 						<p>Through yoga and massage, I guide people into connection and communication with their bodies, creating a comforting space for growth and healing to occur. Tailoring sessions to meet you exactly where you are and encompassing methods specific to you and your unique intentions.</p>
@@ -107,45 +178,7 @@
 		</div>
 	</div>
 
-	<div class="beige-bg" id="work">
-		<div class="col-xs-12">
-			<div class="container">
-				<div class="row">
 
-					<div class="entry col-xs-12 col-md-3 text-left">
-						<h2>Package 2</h2>
-					</div>
-
-					<div class="entry col-xs-12 col-md-9 text-right border-left">
-						<div class="text-left" style="padding-left: 30px;">
-							<p>Maybe it's hard for you to find time to get to a yoga class, for one reason or another. Maybe the environment of a class just does not work for you. You believe in the benefits of a personal practice and desire a deep connection with yourself. </p>
-
-							<h3>What's included:</h3>
-							<ul>
-								<li>8 massage sessions (<%= link_to "see above for details", welcome_path(anchor: 'about-work') %>)
-								<li>16 yoga sessions (<%= link_to "see above for details", welcome_path(anchor: 'about-work') %>)</li>
-							</ul>
-
-							<h3>This package is for you, if...</h3>
-							<ul>
-								<li>You are feeling a deep desire to connect with a greater source</li>
-								<li>You understand that creating change in your body is no quick fix,  patience and consistency are required</li>
-								<li>You REALLY want to create transformation in your body and mind</li>
-								<li>You would like to feel more flexibility and stability in your body</li>
-								<li>You want to dive deeper into creating a personal practice</li>
-							</ul>
-
-							<p><b>$3500 for 12 weeks of bi-weekly sessions and support</b></p>
-						</div>
-
-						
-
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
 
 
 	<div class="col-xs-12 manifesto">
@@ -154,10 +187,10 @@
 				
 				<!-- <h4 class="text-center">Do you have trouble clearing yourself of your day/thoughts/work? </h4>
 				<h4 class="text-center">Are you ready to live with more ease and enjoyment? </h4> -->
-				<h4 class="text-center">Are you ready to feel better and hear the wisdom your body contains?</h4>
+				<h4 class="text-center">Are you ready to feel better and hear the wisdom of your body?</h4>
 
 				<div class="entry col-xs-12 text-center button">
-					<%= link_to "SCHEDULE A FREE CONSULTATION", contact_path, class: "btn btn-default ha-btn" %>
+					<%= link_to "CONTACT ME", contact_path, class: "btn btn-default ha-btn" %>
 				</div> 
 
 			</div>
@@ -165,10 +198,15 @@
 	</div>
 	
 
-	<div class="col-xs-12">
-		<div class="container">
-			<div class="row testimonials">
-				<div class="entry col-xs-6 text-left border-right">
+	<div class="col-xs-12 testimonials">
+		<div class="container-fluid">
+			<div class="row">
+
+					<div class="entry col-xs-6 text-left">
+						<h2>WHAT CLIENTS HAVE TO SAY</h2>
+					</div>	
+
+					<div class="entry col-xs-6 text-right border-left">
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
 						
 
@@ -191,10 +229,6 @@
 							</div>
 						</div>
 					</div>
-
-					<div class="entry col-xs-6 text-left">
-						<h2>WHAT CLIENTS HAVE TO SAY</h2>
-					</div>	
 
 				</div>
 

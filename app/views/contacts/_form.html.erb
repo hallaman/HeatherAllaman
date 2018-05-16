@@ -1,7 +1,7 @@
 <div class="row">
   <h3 class="text-center">CONTACT</h3>
   <div class="text-center" style="padding: 20px 0;">
-  <p>Are you interested in working with me? <br />Let me know what type of work interests you <br />and as much/little about yourself as you'd like to include! </p>
+  <p>Are you interested in working with me? <br /> </p>
 
   </div>
   <%= simple_form_for @contact, :html => {:class => 'form-horizontal contact-form' } do |f| %>
@@ -12,7 +12,7 @@
       <%= f.input :email, :required => true, :placeholder => 'EMAIL', :class => 'form-control' %>
     </div>
     <div class="col-xs-12">
-      <%= f.input :message, :as => :text, :required => true, :placeholder => 'What type of work interests you?', :class => 'form-control', :input_html => { :rows => 15 } %>
+      <%= f.input :message, :as => :text, :required => true, :placeholder => 'Let me know which option resonates with you!', :class => 'form-control', :input_html => { :rows => 15 } %>
     </div>
     <div class= "hidden">
       <%= f.input :nickname, :hint => 'Leave this field blank!' %>

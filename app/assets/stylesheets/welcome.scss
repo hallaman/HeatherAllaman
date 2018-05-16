@@ -117,24 +117,32 @@
 
 .testimonials {
 
+  background: image-url('wood_bg.jpg') no-repeat center center fixed;
+
   .carousel-indicators {
     bottom: -40px
   }
 
-  .item {
-    min-height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .entry.text-right {
+    background-color: $purple;
+    padding-top: 15px;
+  }
 
+  .item {
+    min-height: 250px;
+    height: auto;
+    display: block;
+    
     font-size: 1.4em;
     line-height: 2.2em;
-    color: $beige;
+    color: $white;
   }
 
   h2 {
     color: $beige;
-    padding-left: 25px;
+    text-align: right;
+    padding-right: 25px;
+    color: $white;
   }
 
   .sig {
