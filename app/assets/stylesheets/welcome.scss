@@ -11,7 +11,7 @@
 }
 
 #home_header {
-	background-image: image-url('louise.png');
+	background-image: image-url('laughing.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -19,6 +19,20 @@
   height: auto;
   width: 100%;
 }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+.yoga-dot {
+  animation: fadein 2s;
+}
+.healing-dot {
+  animation: fadein 6s;
+}
+
 
 .work-header {
   background-color: $beige;
@@ -117,7 +131,7 @@
 
 .testimonials {
 
-  background: image-url('wood_bg.jpg') no-repeat center center fixed;
+  background: image-url('meditating.jpg') no-repeat center center fixed;
 
   .carousel-indicators {
     bottom: -40px
