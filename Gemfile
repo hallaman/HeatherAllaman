@@ -23,7 +23,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'sprockets', '~> 3.7.0'
+gem 'sprockets'
+gem 'sprockets-rails'
 
 gem 'devise'
 
@@ -44,7 +45,7 @@ gem 'gibbon', '~> 2.2.4'
 
 # Paperclip for uploading images
 gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
-gem "aws-sdk-v1"
+gem "aws-sdk"
 
 gem 'simple_form'
 
